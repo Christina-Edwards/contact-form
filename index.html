@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contactForm" novalidate aria-describedby="formErrors">
+      <div class="form-group">
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+        <span class="error" id="nameError" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        <span class="error" id="emailError" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" required aria-required="true"></textarea>
+        <span class="error" id="messageError" role="alert"></span>
+      </div>
+
+      <button type="submit">Send Message</button>
+      <div id="formSuccess" role="status" aria-live="polite" class="toast hidden">Message sent successfully!</div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
